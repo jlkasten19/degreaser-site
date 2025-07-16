@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Degreaser | Official Site</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body, html {margin: 0; padding: 0; height: 100%; font-family: 'Roboto', sans-serif; background: #000; color: #d2b48c; overflow-x: hidden; position: relative;}
+#loader {position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #000; display: flex; align-items: center; justify-content: center; z-index: 9999; color: #d2b48c; font-size: 2em; animation: flash 1.5s infinite, pulse 3s infinite; transition: opacity 1s ease;}
+#loader video {position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3; z-index: -1; filter: grayscale(1) contrast(1.2) brightness(0.7);}
+@keyframes flash {0%, 50%, 100% {opacity: 1;} 25%, 75% {opacity: 0;}}
+@keyframes pulse {0%, 100% {transform: scale(1);} 50% {transform: scale(1.05);}}
+.section {padding: 50px 20px; text-align: center; opacity: 0; transition: opacity 1s ease;}
+.section h2 {color: #fff; font-size: 1.8em; margin-bottom: 20px; border-bottom: 2px solid #d2b48c; display: inline-block; padding-bottom: 8px;}
+footer {background: #111; color: #aaa; text-align: center; padding: 30px 20px; font-size: 0.9em; border-top: 1px solid #333; opacity: 0; transition: opacity 1s ease;}
+footer p {margin: 8px 0;}
+footer a {color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; transition: color 0.3s, border-bottom 0.3s;}
+footer a:hover {color: #fff; border-bottom: 1px solid #fff;}
+.section#contact a {color: #8b0000; text-decoration: none; border-bottom: 1px solid transparent; transition: color 0.3s, border-bottom 0.3s;}
+.section#contact a:hover {color: #fff; border-bottom: 1px solid #fff;}
+.button {background: none; border: 2px solid #d2b48c; color: #d2b48c; padding: 10px 20px; text-decoration: none; font-weight: 600; transition: background 0.3s, color 0.3s, transform 0.3s; display: inline-block; margin-top: 20px;}
+.button:hover {background: #d2b48c; color: #000; transform: scale(1.05);}
+.gallery {display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 1000px; margin: 0 auto;}
+.gallery img {width: 160px; border-radius: 6px; transition: transform 0.3s, box-shadow 0.3s;}
+.gallery img:hover {transform: scale(1.05); box-shadow: 0 0 15px rgba(210,180,140,0.3);}
+</style>
+</head>
+<body>
+<audio id="whooshSound" src="https://www.soundjay.com/button/sounds/button-29.mp3" preload="auto"></audio>
+<div id="loader">DEGREASER<video src="IMG_2432.mov#t=5,15" autoplay muted></video></div>
+<header class="section"><h1>DEGREASER</h1><a href="#music" class="button">LISTEN NOW</a></header>
+<section class="section" id="music"><h2>Degreaser on Spotify</h2><div><iframe src="https://open.spotify.com/embed/artist/1T0bG7zCkhssnA2VgRnh7x?utm_source=generator&theme=0" width="100%" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div></section>
+<section class="section" id="gallery"><h2>Live Gallery</h2><div class="gallery"><img src="2ECD9B3A-0CDF-4F2F-8FEA-9FDEFA9A9992.jpeg" alt="Live Performance 1"><img src="5B83F0EE-29D6-4FA7-A2EF-47106D995390.jpeg" alt="Live Performance 2"><img src="6C003074-7C7F-4A7E-89E8-59BD63F38BC7.jpeg" alt="Live Performance 3"><img src="75E0C2F3-0D29-43E6-A180-6E09E1B1B962.jpeg" alt="Live Performance 4"><img src="61182715-BA0A-494F-97DF-8C7191D59051.jpeg" alt="Live Performance 5"></div></section>
+<section class="section" id="shows"><h2>Upcoming Shows</h2><p>Stay tuned for show announcements and event updates here.</p></section>
+<section class="section" id="contact"><h2>Contact</h2><p>Email: <a href="mailto:degreaserband@gmail.com">degreaserband@gmail.com</a></p><p>Instagram: <a href="https://instagram.com/" target="_blank">@degreaserband</a></p></section>
+<footer><p>&copy; 2025 Degreaser. All rights reserved.</p><p>Website design by Degreaser | Colorado Slam Hardcore</p></footer>
+<script>
+setTimeout(() => {
+    const loader = document.getElementById('loader');
+    const sound = document.getElementById('whooshSound');
+    loader.style.opacity = '0';
+    sound.play();
+    setTimeout(() => {
+        loader.style.display = 'none';
+        document.querySelectorAll('.section, footer').forEach(el => {
+            el.style.display = 'block';
+            setTimeout(() => { el.style.opacity = '1'; }, 50);
+        });
+    }, 800);
+}, 4000);
+</script>
+</body>
+</html>
